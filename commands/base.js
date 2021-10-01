@@ -5,8 +5,7 @@
  *  this file then expect the file to be slightly different than in the video.
  */
 
-const { prefix } = require('../config.json')
-
+const { prefix } = require('../config.json');
 
 const validatePermissions = (permissions) => {
     const validPermissions = [
@@ -50,16 +49,12 @@ const validatePermissions = (permissions) => {
     }
 }
 
-module.exports = (client, commandOptions, config) => {
+const allCommands = {};
+
+module.exports = (commandOptions) => {
     let {
         commands,
-        expectedArgs = '',
-        permissionError = 'You do not have permission to run this command.',
-        minArgs = 0,
-        maxArgs = null,
         permissions = [],
-        requiredRoles = [],
-        callback,
     } = commandOptions
 
     // Ensure the command and aliases are in an array
@@ -74,68 +69,85 @@ module.exports = (client, commandOptions, config) => {
         if (typeof permissions === 'string') {
             permissions = [permissions]
         }
-
         validatePermissions(permissions)
     }
 
+    for (const command of commands) {
+        allCommands[command] = {
+            ...commandOptions,
+            commands,
+            permissions
+        };
+    }
+}
+module.exports.listen = (client, config) => {
     // Listen for messages
     client.on('message', (message) => {
-        const { member, content, guild } = message
+        const { member, content, guild } = message;
 
-        for (const alias of commands) {
-            const command = `${prefix}${alias.toLowerCase()}`
+        // Split on any number of spaces
+        const arguments = content.split(/[ ]+/)
 
-            if (
-                content.toLowerCase().startsWith(`${command} `) ||
-                content.toLowerCase() === command
-            ) {
-                // A command has been ran
+        // Remove the command which is the first index
 
-                // Ensure the user has the required permissions
-                for (const permission of permissions) {
-                    if (!member.hasPermission(permission)) {
-                        message.reply(permissionError)
-                        return
-                    }
+        const name = arguments.shift().toLowerCase();
+
+        if (name.startsWith(prefix)) {
+            const command = allCommands[name.replace(prefix, "")]
+
+            if (!command) {
+                return;
+            }
+            const {
+                permissions,
+                permissionError = 'You do not have permission to run this command.',
+                requiredRoles = [],
+                minArgs = 0,
+                maxArgs = null,
+                expectedArgs,
+                callback,
+            } = command;
+
+            // A command has been ran
+            console.log("user " + message.author.username + " has requested to run: " + message.content);
+            // Ensure the user has the required permissions
+            for (const permission of permissions) {
+                if (!member.hasPermission(permission)) {
+                    message.reply(permissionError)
+                    return
                 }
+            }
 
-                // Ensure the user has the required roles
-                for (const requiredRole of requiredRoles) {
-                    const role = guild.roles.cache.find(
-                        (role) => role.name === requiredRole
-                    )
+            // Ensure the user has the required roles
+            for (const requiredRole of requiredRoles) {
+                const role = guild.roles.cache.find(
+                    (role) => role.name === requiredRole
+                )
 
-                    if (!role || !member.roles.cache.has(role.id)) {
-                        message.reply(
-                            `You must have the "${requiredRole}" role to use this command.`
-                        )
-                        return
-                    }
-                }
-
-                // Split on any number of spaces
-                const arguments = content.split(/[ ]+/)
-
-                // Remove the command which is the first index
-                arguments.shift()
-
-                // Ensure we have the correct number of arguments
-                if (
-                    arguments.length < minArgs ||
-                    (maxArgs !== null && arguments.length > maxArgs)
-                ) {
+                if (!role || !member.roles.cache.has(role.id)) {
                     message.reply(
-                        `Incorrect syntax! Use ${prefix}${alias} ${expectedArgs}`
+                        `You must have the "${requiredRole}" role to use this command.`
                     )
                     return
                 }
+            }
 
-                // Handle the custom command code
-                console.log("user " + member + "has requested to run " + message);
-                callback(message, arguments, arguments.join(' '), client)
-
+            // Ensure we have the correct number of arguments
+            if (
+                arguments.length < minArgs ||
+                (maxArgs !== null && arguments.length > maxArgs)
+            ) {
+                message.reply(
+                    `Incorrect syntax! Use ${name} ${expectedArgs}`
+                )
                 return
             }
+
+            // Handle the custom command code
+            callback(message, arguments, arguments.join(' '), client);
         }
+
+
+
     })
 }

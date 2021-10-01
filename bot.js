@@ -9,7 +9,6 @@
 const discord = require('discord.js')
 const config = require('./config.json');
 const statBot = new discord.Client();
-
 //Added as part of WornOffKey's 25th vid
 const path = require('path');
 const fs = require('fs');
@@ -30,12 +29,13 @@ statBot.on('ready', async() => {
             } else if (file !== baseFile) {
                 const option = require(path.join(__dirname, dir, file))
                 console.log(file, option)
-                commandBase(statBot, option, config)
+                commandBase(option)
 
             }
         }
     }
     readCommands('commands');
+    commandBase.listen(statBot);
 });
 
 function setDefaultStatus() {
