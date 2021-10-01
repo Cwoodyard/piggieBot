@@ -1,0 +1,104 @@
+{
+    "assets": [
+        {
+            "id": 63150419,
+            "token_id": "70289559822031367411609110768757677435617798982981178421918901379572997029889",
+            "num_sales": 0,
+            "background_color": null,
+            "image_url": "https://lh3.googleusercontent.com/MJeOkqS0eOOXGo7rozxXQGe443W3wGL_FwBKNyYPp4wqJHHZyp5orDfudJPvnjByG6rsMrr4oZOlS3vyb5RMod11kGeSrU8eUJS7ag",
+            "image_preview_url": "https://lh3.googleusercontent.com/MJeOkqS0eOOXGo7rozxXQGe443W3wGL_FwBKNyYPp4wqJHHZyp5orDfudJPvnjByG6rsMrr4oZOlS3vyb5RMod11kGeSrU8eUJS7ag=s250",
+            "image_thumbnail_url": "https://lh3.googleusercontent.com/MJeOkqS0eOOXGo7rozxXQGe443W3wGL_FwBKNyYPp4wqJHHZyp5orDfudJPvnjByG6rsMrr4oZOlS3vyb5RMod11kGeSrU8eUJS7ag=s128",
+            "image_original_url": null,
+            "animation_url": null,
+            "animation_original_url": null,
+            "name": "Dino Squad Unleashed #1036",
+            "description": null,
+            "external_link": null,
+            "asset_contract": {
+                "address": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+                "asset_contract_type": "semi-fungible",
+                "created_date": "2020-12-02T17:40:53.232025",
+                "name": "OpenSea Collection",
+                "nft_version": null,
+                "opensea_version": "2.0.0",
+                "owner": 102384,
+                "schema_name": "ERC1155",
+                "symbol": "OPENSTORE",
+                "total_supply": null,
+                "description": "",
+                "external_link": null,
+                "image_url": null,
+                "default_to_fiat": false,
+                "dev_buyer_fee_basis_points": 0,
+                "dev_seller_fee_basis_points": 0,
+                "only_proxied_transfers": false,
+                "opensea_buyer_fee_basis_points": 0,
+                "opensea_seller_fee_basis_points": 250,
+                "buyer_fee_basis_points": 0,
+                "seller_fee_basis_points": 250,
+                "payout_address": null
+            },
+            "permalink": "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/70289559822031367411609110768757677435617798982981178421918901379572997029889",
+            "collection": {
+                "banner_image_url": "https://lh3.googleusercontent.com/U6YDkxlWBZr_Um1djPOgW0TSqiiNUuc5FrbIh7YR3KfpUzr-8Gebhldc-iT8jj3DI_GE0_hYIFEuI1JcDyP-XNOnHsrH4HmrVDam-w=s2500",
+                "chat_url": null,
+                "created_date": "2021-10-01T01:49:48.923824",
+                "default_to_fiat": false,
+                "description": "Presale 0.07 ETH.\n\nClimate change is real and is already causing major changes around the world. Scientists have now discovered that permafrost has melted deep in the heart of the Swiss Alps. This has led to the awakening of 10,000 preserved dinos. Their mission is to conquer the planet once again. But to do so, they must infiltrate humanity and adapt cleverly. Help them on their mission! Mint a dino to free it from the ice and UNLEASH on humanity.\n\nEvery Dino is a combination of 150+ unique traits and therefore makes every Dino special. Our artist drew each layer by hand and is testing all sorts of combination to make sure each and every Dino looks awesome.",
+                "dev_buyer_fee_basis_points": "0",
+                "dev_seller_fee_basis_points": "0",
+                "discord_url": "https://discord.gg/DinoSquadNFT",
+                "display_data": {
+                    "card_display_style": "contain"
+                },
+                "external_url": "https://www.dinosquad.io/",
+                "featured": false,
+                "featured_image_url": "https://lh3.googleusercontent.com/ZevoTCaE_fcAlx9L33xh1EiaQZ46mNztDq8ZJWmF09rgO7ceeMZf8Kzrt2ayo3SGDerqt_NDJdH3AFnh_XeA9l44WYhPevy0yydnfg=s300",
+                "hidden": false,
+                "safelist_request_status": "not_requested",
+                "image_url": "https://lh3.googleusercontent.com/ZevoTCaE_fcAlx9L33xh1EiaQZ46mNztDq8ZJWmF09rgO7ceeMZf8Kzrt2ayo3SGDerqt_NDJdH3AFnh_XeA9l44WYhPevy0yydnfg=s120",
+                "is_subject_to_whitelist": false,
+                "large_image_url": "https://lh3.googleusercontent.com/ZevoTCaE_fcAlx9L33xh1EiaQZ46mNztDq8ZJWmF09rgO7ceeMZf8Kzrt2ayo3SGDerqt_NDJdH3AFnh_XeA9l44WYhPevy0yydnfg=s300",
+                "medium_username": null,
+                "name": "Dino Squad Unleashed Official",
+                "only_proxied_transfers": false,
+                "opensea_buyer_fee_basis_points": "0",
+                "opensea_seller_fee_basis_points": "250",
+                "payout_address": null,
+                "require_email": false,
+                "short_description": null,
+                "slug": "dino-squad-unleashed-official",
+                "telegram_url": null,
+                "twitter_username": "DinoSquadNFT",
+                "instagram_username": null,
+                "wiki_url": null
+            },
+            "decimals": null,
+            "token_metadata": null,
+            "owner": {
+                "user": {
+                    "username": "NullAddress"
+                },
+                "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/1.png",
+                "address": "0x0000000000000000000000000000000000000000",
+                "config": ""
+            },
+            "sell_orders": null,
+            "creator": {
+                "user": {
+                    "username": null
+                },
+                "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/33.png",
+                "address": "0x9b667b2435bc2336261fe4f169607609d9656a27",
+                "config": ""
+            },
+            "traits": [],
+            "last_sale": null,
+            "top_bid": null,
+            "listing_date": null,
+            "is_presale": true,
+            "transfer_fee_payment_token": null,
+            "transfer_fee": null
+        }
+    ]
+}

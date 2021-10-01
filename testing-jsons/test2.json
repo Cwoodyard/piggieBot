@@ -1,0 +1,236 @@
+{
+    "assets": [
+        {
+            "id": 2249250,
+            "token_id": "1196570",
+            "num_sales": 1,
+            "background_color": "a2c2eb",
+            "image_url": "https://storage.opensea.io/0x06012c8cf97bead5deae237070f9587f8e7a266d/1196570-1552858011.png",
+            "image_preview_url": "https://storage.opensea.io/0x06012c8cf97bead5deae237070f9587f8e7a266d-preview/1196570-1552858018.png",
+            "image_thumbnail_url": "https://storage.opensea.io/0x06012c8cf97bead5deae237070f9587f8e7a266d-thumbnail/1196570-1552858022.png",
+            "image_original_url": "https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/1196570.png",
+            "animation_url": null,
+            "animation_original_url": null,
+            "name": "💙Gen0 PU14/00/13 2xMs h3BhW6",
+            "description": "Heyo. I am 💙Gen0 PU14/00/13 2xMs h3BhW6, AKA Kitty of your dreams. I find ridin' dirty to be completely freaky. Do you also love salsa verde?",
+            "external_link": "https://www.cryptokitties.co/kitty/1196570",
+            "asset_contract": {
+                "address": "0x06012c8cf97bead5deae237070f9587f8e7a266d",
+                "asset_contract_type": "non-fungible",
+                "created_date": "2018-01-23T04:51:38.832339",
+                "name": "CryptoKitties",
+                "nft_version": "1.0",
+                "opensea_version": null,
+                "owner": 463841,
+                "schema_name": "ERC721",
+                "symbol": "CKITTY",
+                "total_supply": null,
+                "description": "CryptoKitties is a game centered around breedable, collectible, and oh-so-adorable creatures we call CryptoKitties! Each cat is one-of-a-kind and 100% owned by you; it cannot be replicated, taken away, or destroyed.",
+                "external_link": "https://www.cryptokitties.co/",
+                "image_url": "https://lh3.googleusercontent.com/C272ZRW1RGGef9vKMePFSCeKc1Lw6U40wl9ofNVxzUxFdj84hH9xJRQNf-7wgs7W8qw8RWe-1ybKp-VKuU5D-tg=s60",
+                "default_to_fiat": false,
+                "dev_buyer_fee_basis_points": 0,
+                "dev_seller_fee_basis_points": 0,
+                "only_proxied_transfers": false,
+                "opensea_buyer_fee_basis_points": 0,
+                "opensea_seller_fee_basis_points": 250,
+                "buyer_fee_basis_points": 0,
+                "seller_fee_basis_points": 250,
+                "payout_address": null
+            },
+            "permalink": "https://opensea.io/assets/0x06012c8cf97bead5deae237070f9587f8e7a266d/1196570",
+            "collection": {
+                "banner_image_url": "https://storage.opensea.io/static/banners/cryptokitties-banner2.png",
+                "chat_url": null,
+                "created_date": "2019-04-26T22:13:04.207050",
+                "default_to_fiat": false,
+                "description": "CryptoKitties is a game centered around breedable, collectible, and oh-so-adorable creatures we call CryptoKitties! Each cat is one-of-a-kind and 100% owned by you; it cannot be replicated, taken away, or destroyed.",
+                "dev_buyer_fee_basis_points": "0",
+                "dev_seller_fee_basis_points": "0",
+                "discord_url": "https://discord.gg/cryptokitties",
+                "display_data": {
+                    "card_display_style": "padded"
+                },
+                "external_url": "https://www.cryptokitties.co/",
+                "featured": false,
+                "featured_image_url": "https://storage.opensea.io/0x06012c8cf97bead5deae237070f9587f8e7a266d-featured-1556589429.png",
+                "hidden": false,
+                "safelist_request_status": "verified",
+                "image_url": "https://lh3.googleusercontent.com/C272ZRW1RGGef9vKMePFSCeKc1Lw6U40wl9ofNVxzUxFdj84hH9xJRQNf-7wgs7W8qw8RWe-1ybKp-VKuU5D-tg=s60",
+                "is_subject_to_whitelist": false,
+                "large_image_url": "https://lh3.googleusercontent.com/C272ZRW1RGGef9vKMePFSCeKc1Lw6U40wl9ofNVxzUxFdj84hH9xJRQNf-7wgs7W8qw8RWe-1ybKp-VKuU5D-tg",
+                "medium_username": null,
+                "name": "CryptoKitties",
+                "opensea_buyer_fee_basis_points": "0",
+                "opensea_seller_fee_basis_points": "250",
+                "payout_address": null,
+                "require_email": false,
+                "short_description": null,
+                "slug": "cryptokitties",
+                "telegram_url": null,
+                "twitter_username": "CryptoKitties",
+                "instagram_username": null,
+                "wiki_url": "https://opensea.readme.io/page/cryptokitties"
+            },
+            "decimals": null,
+            "token_metadata": "",
+            "owner": {
+                "user": {
+                    "username": "CryptoKitties-Auction-Contract"
+                },
+                "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/26.png",
+                "address": "0xb1690c08e213a35ed9bab7b318de14420fb57d8c",
+                "config": "verified"
+            },
+            "sell_orders": null,
+            "creator": {
+                "user": null,
+                "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/3.png",
+                "address": "0xba52c75764d6f594735dc735be7f1830cdf58ddf",
+                "config": ""
+            },
+            "traits": [
+                {
+                    "trait_type": "coloreyes",
+                    "value": "sapphire",
+                    "display_type": null,
+                    "max_value": null,
+                    "trait_count": 37720,
+                    "order": null
+                },
+                {
+                    "trait_type": "body",
+                    "value": "selkirk",
+                    "display_type": null,
+                    "max_value": null,
+                    "trait_count": 51849,
+                    "order": null
+                },
+                {
+                    "trait_type": "generation",
+                    "value": 0,
+                    "display_type": "number",
+                    "max_value": null,
+                    "trait_count": 36557,
+                    "order": null
+                },
+                {
+                    "trait_type": "cooldown_index",
+                    "value": 3,
+                    "display_type": null,
+                    "max_value": null,
+                    "trait_count": 176968,
+                    "order": null
+                },
+                {
+                    "trait_type": "colorsecondary",
+                    "value": "egyptiankohl",
+                    "display_type": null,
+                    "max_value": null,
+                    "trait_count": 40172,
+                    "order": null
+                },
+                {
+                    "trait_type": "colorprimary",
+                    "value": "brownies",
+                    "display_type": null,
+                    "max_value": null,
+                    "trait_count": 33785,
+                    "order": null
+                },
+                {
+                    "trait_type": "colortertiary",
+                    "value": "kalahari",
+                    "display_type": null,
+                    "max_value": null,
+                    "trait_count": 24363,
+                    "order": null
+                },
+                {
+                    "trait_type": "eyes",
+                    "value": "asif",
+                    "display_type": null,
+                    "max_value": null,
+                    "trait_count": 30362,
+                    "order": null
+                },
+                {
+                    "trait_type": "mouth",
+                    "value": "moue",
+                    "display_type": null,
+                    "max_value": null,
+                    "trait_count": 31530,
+                    "order": null
+                },
+                {
+                    "trait_type": "pattern",
+                    "value": "mittens",
+                    "display_type": null,
+                    "max_value": null,
+                    "trait_count": 20779,
+                    "order": null
+                },
+                {
+                    "trait_type": "virginity",
+                    "value": "non-virgin",
+                    "display_type": null,
+                    "max_value": null,
+                    "trait_count": 978453,
+                    "order": null
+                }
+            ],
+            "last_sale": {
+                "asset": {
+                    "token_id": "1196570",
+                    "decimals": null
+                },
+                "asset_bundle": null,
+                "event_type": "successful",
+                "event_timestamp": "2018-11-19T17:10:45",
+                "auction_type": "dutch",
+                "total_price": "365591018063636257",
+                "payment_token": {
+                    "id": 1,
+                    "symbol": "ETH",
+                    "address": "0x0000000000000000000000000000000000000000",
+                    "image_url": "https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg",
+                    "name": "Ether",
+                    "decimals": 18,
+                    "eth_price": "1.000000000000000",
+                    "usd_price": "3264.750000000000000000"
+                },
+                "transaction": {
+                    "block_hash": "0xe078b4db7aceff9dd5b87f02aea75dab8a9101f5f14d3f0fca9a754a85a3b0b5",
+                    "block_number": "6734652",
+                    "from_account": {
+                        "user": {
+                            "username": "PsyDuck"
+                        },
+                        "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/4.png",
+                        "address": "0x4886404ecfb86b759b27867afb0f64172eea1c53",
+                        "config": "affiliate"
+                    },
+                    "id": 3843704,
+                    "timestamp": "2018-11-19T17:10:45",
+                    "to_account": {
+                        "user": {
+                            "username": "CryptoKitties-Auction-Contract"
+                        },
+                        "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/26.png",
+                        "address": "0xb1690c08e213a35ed9bab7b318de14420fb57d8c",
+                        "config": "verified"
+                    },
+                    "transaction_hash": "0x6a8f0828ed1e1caf4b6b6201464e6415f5a08cdebac8fefe6396f7d2d0ab461f",
+                    "transaction_index": "46"
+                },
+                "created_date": "2018-11-19T17:12:15.893771",
+                "quantity": "1"
+            },
+            "top_bid": null,
+            "listing_date": null,
+            "is_presale": false,
+            "transfer_fee_payment_token": null,
+            "transfer_fee": null
+        }
+    ]
+}
