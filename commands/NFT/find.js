@@ -1,10 +1,4 @@
-const opensea = require('opensea-js');
-const OpenSeaPort = opensea.OpenSeaPort;
-const Network = opensea.Network;
-const Web3 = require('web3');
-const http = require('http');
-const Web3HttpProvider = require('web3-providers-http');
-const { getWyvernAsset } = require('opensea-js/lib/utils/utils');
+const fetch = require('node-fetch');
 const discord = require('discord.js');
 module.exports = {
     commands: ['find'],
