@@ -9,7 +9,7 @@ module.exports = {
     callback: (message, arguments, text) => {
         //setting constants
         let id = arguments[0];
-        let address = "0x495f947276749ce646f68ac8c248420045cb7b5e";
+        let address = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d";
 
 
         //using this as a catch all. Feel free to delete if you dont want it
@@ -30,12 +30,16 @@ module.exports = {
         try {
 
             if (!arguments[1]) {
-                fetch('https://api.opensea.io/api/v1/assets?token_ids=' + id + '&asset_contract_address=0x495f947276749ce646f68ac8c248420045cb7b5e&order_direction=desc&offset=0&limit=20', options)
+                fetch('https://api.opensea.io/api/v1/assets?token_ids=' + id + '&asset_contract_address=0x06012c8cf97BEaD5deAe237070F9587f8E7A266d&order_direction=desc&offset=0&limit=20', options)
 
                     .then(response => response.text())
 
                     .then(text => {
                         console.log("oof1: " + text);
+                        if (!text) {
+                            unavaliable();
+                            return;
+                        }
                         const json = JSON.parse(text);
                         // console.log("discordURL: " + json.assets[0].traits.length);
                         // console.log("you sure? " + json.assets[0].last_sale.transaction.length)
@@ -43,7 +47,10 @@ module.exports = {
 
                     })
 
-                    .catch(err => console.error(err));
+                    .catch(err => {
+                        console.error(err)
+                        message.channel.send('Appologies, NFT was not found or you really fucked the bot...');
+                    });
             } else {
                 console.log(arguments[1]);
                 address = arguments[1];
@@ -53,6 +60,10 @@ module.exports = {
 
                     .then(text => {
                         console.log("oof: " + text);
+                        if (!text) {
+                            unavaliable();
+                            return;
+                        }
                         const json = JSON.parse(text);
                         // console.log("discordURL: " + json.assets[0].traits.length);
                         // console.log("you sure? " + json.assets[0].last_sale.transaction.length)
@@ -62,7 +73,11 @@ module.exports = {
 
                     // .then(response => console.log(response))
 
-                    .catch(err => console.error(err));
+                    .catch(err => {
+                        console.error(err)
+                        message.channel.send('Appologies, NFT was not found or you really fucked the bot...');
+                    });
+
             }
 
 
@@ -165,7 +180,11 @@ module.exports = {
             }
             // console.log("Im here here now!");
         }
-        // function()
+        function unavaliable() {
+            console.log("NFT NOT FOUND");
+            message.channel.send('Appologies, NFT was not found');
+
+        }
 
 
 

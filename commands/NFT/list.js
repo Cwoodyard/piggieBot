@@ -7,6 +7,8 @@ module.exports = {
     callback: (message, arguments, text) => {
         //using this as a catch all. Feel free to delete if you dont want it
         message.channel.send('It seems like you have entered an incorrect command. Please use pcommands to get a list of avaliable commands.')
+
+        //Reference https://www.youtube.com/watch?v=f5OcnlgJjHA
     },
     permissions: [],
     requiredRoles: [],
