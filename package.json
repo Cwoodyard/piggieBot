@@ -2,8 +2,9 @@
     "name": "piggienftbot",
     "version": "1.0.0",
     "description": "Bot to Monitor interact with NFT's and specifically the CrazyPiggies NFT project. Pourpose Built.",
-    "main": "bot.js",
+    "main": "./src/bot.js",
     "dependencies": {
+        "@discordjs/rest": "^0.1.0-canary.0",
         "abort-controller": "^3.0.0",
         "api": "^3.4.0",
         "asynckit": "^0.4.0",
@@ -12,14 +13,17 @@
         "combined-stream": "^1.0.8",
         "core-js": "^3.18.1",
         "delayed-stream": "^1.0.0",
-        "discord.js": "^12.5.3",
+        "discord-api-types": "^0.23.1",
+        "discord-buttons": "^4.0.0",
+        "dotenv": "^10.0.0",
         "event-target-shim": "^5.0.1",
         "fbemitter": "^3.0.0",
         "mime-db": "^1.49.0",
         "mime-types": "^2.1.32",
+        "moralis": "^0.0.74",
         "node-fetch": "^2.6.5",
-        "nvm": "^0.0.4",
         "prism-media": "^1.3.2",
+        "reconlx": "^2.4.3",
         "setimmediate": "^1.0.5",
         "sha3": "^2.1.4",
         "tr46": "^0.0.3",
@@ -29,9 +33,16 @@
         "ws": "^7.5.5"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "node ./src/bot.js"
     },
     "author": "v1p3r_hax",
     "license": "ISC",
-    "repository": "https://github.com/Cwoodyard/piggieBot.git"
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Cwoodyard/piggieBot.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Cwoodyard/piggieBot/issues"
+    },
+    "homepage": "https://github.com/Cwoodyard/piggieBot#readme"
 }

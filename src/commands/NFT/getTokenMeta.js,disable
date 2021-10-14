@@ -1,0 +1,16 @@
+const Moralis = require('moralis');
+module.exports = {
+    name: 'gettokenmeta',
+    description: `getting a token's metadata`,
+    commands: ['getTokenMeta'],
+    expectedArgs: '',
+    permissionError: '',
+    minArgs: 0,
+    maxArgs: 0,
+    async execute(message, args) {
+        const options = { address: "0x6cE5c0B4520F824B0Cd1da057644cbbED8bd3DdD", token_id: "1", chain: "matic" };
+        const tokenIdMetadata = await Moralis.Web3API.token.getTokenIdMetadata(options);
+        console.log(tokenIdMetadata);
+
+    }
+}
