@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const Moralis = require('moralis/node');
 const discord = require('discord.js');
 
 module.exports = {
@@ -106,17 +107,35 @@ module.exports = {
 
 
             if ((json.dna)) { // Got it to fetch the NFT data. Just need to fill it in on opensea related info.
+
+
+                // Since its not directly from Opensea, its legit just taping up the bs and making it work
+                let embedTitle = json.name;
+                let embedUrl = 'https://opensea.io/assets/matic/' + jsonM.token_address + '/' + jsonM.token_id;
+                let embedAuthor = `${jsonM.name}`;
+                let embedAuthorPFP = 'https://polygon.technology/media-kit/matic-token-icon.png';
+                let embedDesc = json.description;
+                let embedThumbnail = 'https://ipfs.io/ipfs/QmQKyQGGFDgVQKRRWUGUudSmXjK6PDJKTnvd27FuWimizG?filename=1.png';
+                // initial ipfs://QmaPMR1gbc1fzy1vUro9n1ztsnW8c9UwsJmF29Eony2517/65.png
+                // new https://ipfs.moralis.io:2053/ipfs/QmTAvNpKKdGqFafTLsYuBmRUuVX9a8GPF46Ff5WozAZKu1/65.png
+                let embedImage = 'https://ipfs.moralis.io:2053/ipfs/' + json.image.substr(7);
+                console.log('JsonM name: ' + embedTitle)
+                console.log('JsonM url: ' + embedUrl)
+                console.log('Json name: ' + embedAuthor)
+                console.log('embedImage url: ' + embedImage)
+
+                // moralis.
+
                 switch (json) {
                     default: const exampleEmbed4 = new discord.MessageEmbed()
                         .setColor('#0099ff')
-                        .setTitle(`${json.name}`)
-                        .setURL(json.permalink)
-                        .setAuthor(jsonM.name, json.collection.profile_img_url, json.collection.external_url)
-                        .setDescription(json.collection.description)
-                        .setThumbnail(json.collection.featured_image_url)
-                        .setImage(json.image_url)
+                        .setTitle(embedTitle)
+                        .setAuthor(embedAuthor, embedAuthorPFP, embedUrl)
+                        .setDescription(embedDesc)
+                        // .setThumbnail(embedImage)
+                        .setImage(embedImage)
                         .setTimestamp()
-                        .setFooter('Powered by OpenSea.io', 'https://storage.googleapis.com/opensea-static/Logomark/Logomark-White.png');
+                        .setFooter('Powered by OpenSea.io and Moralis', 'https://storage.googleapis.com/opensea-static/Logomark/Logomark-White.png');
 
                     message.channel.send({ embeds: [exampleEmbed4] });
                     // console.log("option4");
@@ -247,6 +266,7 @@ module.exports = {
                 console.log('json2: ' + JSON.stringify(json2))
                     // console.log("discordURL: " + json.assets[0].traits.length);
                     // console.log("you sure? " + json.assets[0].last_sale.transaction.length)
+                message.channel.send('<<Moralis has found the NFT and is working to bring it to you :)>>');
                 sendEmbed(json2, json);
 
             })
