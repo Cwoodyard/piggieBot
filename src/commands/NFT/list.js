@@ -22,7 +22,7 @@ module.exports = {
         let firstNFT = 0;
         let lastNFT = '';
 
-        const options = { method: 'GET' };
+        const options = { method: 'GET', headers: { 'X-API-KEY': '0f5fa8b8fd2b4c4595d29f47cd59032f' } };
         fetch('https://api.opensea.io/api/v1/assets?token_ids=' + id + '&asset_contract_address=0x06012c8cf97BEaD5deAe237070F9587f8E7A266d&order_direction=desc&offset=0', options)
 
         .then(response => response.text())

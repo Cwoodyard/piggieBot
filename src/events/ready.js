@@ -8,5 +8,5 @@ module.exports = {
     maxArgs: 0,
     async execute() {
         console.log('OINK BITCH!');
-    }
+    } 
 }

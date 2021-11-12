@@ -30,7 +30,7 @@ module.exports = {
         //      List the Traits of each NFT via metadata
         //          No set limit, except for what Embed can hold
         //      
-        let options = { method: 'GET' };
+        let options = { method: 'GET', headers: { 'X-API-KEY': '0f5fa8b8fd2b4c4595d29f47cd59032f' } };
         console.log('id ' + args)
         try {
 
@@ -130,9 +130,10 @@ module.exports = {
                     default: const exampleEmbed4 = new discord.MessageEmbed()
                         .setColor('#0099ff')
                         .setTitle(embedTitle)
-                        .setAuthor(embedAuthor, embedAuthorPFP, embedUrl)
+                        .setURL(embedUrl)
+                        .setAuthor(embedAuthor, embedAuthorPFP)
                         .setDescription(embedDesc)
-                        // .setThumbnail(embedImage)
+                        .setThumbnail(embedImage)
                         .setImage(embedImage)
                         .setTimestamp()
                         .setFooter('Powered by OpenSea.io and Moralis', 'https://storage.googleapis.com/opensea-static/Logomark/Logomark-White.png');
@@ -242,7 +243,7 @@ module.exports = {
         }
 
         function unavaliable(id, address) {
-            console.log("Checking if its part of polycon network!");
+            console.log("Checking if its part of polygon network!");
             let options = {
                 method: 'GET',
                 headers: {
@@ -279,7 +280,7 @@ module.exports = {
             });
 
             console.log("NFT NOT FOUND");
-            message.channel.send('Appologies, NFT was not found');
+            // message.channel.send('Appologies, NFT was not found');
 
         }
 
