@@ -8,10 +8,10 @@
 
 //Modules
 const { Client, Intents, Collection } = require("discord.js");
-const { Autohook } = require("twitter-autohook");
 const fs = require("fs");
 const { filter } = require("core-js/features/array");
 const { commands } = require("./events/ready");
+const twitWatchdog = require("./twitter-integration/twitterStart");
 require("dotenv").config();
 
 //Discord
@@ -34,21 +34,12 @@ const eventFiles = fs
 const commandFolders = fs.readdirSync("./src/commands");
 
 //File Registration - Twitter
-const twitterFunctions = fs
-  .readdirSync("./src/twitterFunctions")
-  .filter((file) => file.endsWith(".js"));
-const twitterEvents = fs
-  .readdirSync("./src/twitterEvents")
-  .filter((file) => file.endsWith(".js"));
-
-//Twitter
-const twitter = new Autohook({
-  token: process.env.TWITTER_ACCESS_TOKEN,
-  token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
-  consumer_key: process.env.TWITTER_CONSUMER_KEY,
-  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-  env: process.env.TWITTER_WEBHOOK_ENV,
-});
+// const twitterFunctions = fs
+//   .readdirSync("./src/twitterFunctions")
+//   .filter((file) => file.endsWith(".js"));
+// const twitterEvents = fs
+//   .readdirSync("./src/twitterEvents")
+//   .filter((file) => file.endsWith(".js"));
 
 //Startup
 (async () => {
@@ -59,27 +50,7 @@ const twitter = new Autohook({
   statBot.handleEvents(eventFiles, "./src/events");
   statBot.handleCommands(commandFolders, "./src/commands");
   statBot.login(process.env.token);
-
-  //Twitter Side
-  for (file of twitterFunctions) {
-    require(`./twitterFunctions/${file}`)(twitter);
-  }
-  twitter.handleTwitEvent(twitterEvents, "./src/twitterEvents");
-  await twitter.removeWebhooks();
-  twitter.on("event", async (event) => {
-    console.log(event);
-  });
-  await twitter.start();
-  await twitter.subscribe({
-    oauth_token: process.env.TWITTER_ACCESS_TOKEN,
-    oauth_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
-  });
-
-  //   (async () => {
-  //     twitter.on("event", async (event) => {
-  //       twitter.twitterEvent(event, "./src/twitter/event");
-  //     });
-  //   })();
+  twitWatchdog.start();
 })();
 
 // function setDefaultStatus() {
