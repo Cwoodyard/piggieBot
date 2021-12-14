@@ -1,7 +1,7 @@
 const { Autohook } = require("twitter-autohook");
 const fs = require("fs");
 
-async function start() {
+async function start(discord) {
   try {
     // WebSocket Setup
     const twitter = new Autohook({
@@ -30,11 +30,11 @@ async function start() {
         // Identifying Events and forwarding to event files
         if (event.favorite_events) {
           if (events.name == "favorite_events") {
-            events.execute(event);
+            events.execute(event, discord);
           }
         } else if (event.tweet_create_events) {
           if (events.name == "tweet_create_events") {
-            events.execute(event);
+            events.execute(event, discord);
           }
         }
       });

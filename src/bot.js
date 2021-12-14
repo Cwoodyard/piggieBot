@@ -50,7 +50,7 @@ const commandFolders = fs.readdirSync("./src/commands");
   statBot.handleEvents(eventFiles, "./src/events");
   statBot.handleCommands(commandFolders, "./src/commands");
   statBot.login(process.env.token);
-  twitWatchdog.start();
+  twitWatchdog.start(statBot);
 })();
 
 // function setDefaultStatus() {
