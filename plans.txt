@@ -1,11 +1,8 @@
 Backround Processing/Posting
     Twitter Activity 
         Need to have a backend Async watching for new tweets --DONE
-        Can seperate by tweet, follow, retweet --CURRENT 
-                NEED TO PARSE EVENT DATA GIVEN BY AUTOHOOK TOOL TO IDENTIFY EVENT THAT OCCURED
-
-
-            each will be seperate command/function
+        Can seperate by tweet, follow, retweet --DONE 
+            each will be seperate command/function --DONE
     Blockchain Activity
 Frontend
     Music Integration
