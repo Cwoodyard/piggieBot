@@ -7,12 +7,12 @@
  */
 
 //Modules
-const { Client, Intents, Collection } = require("discord.js");
+const { Client, Intents, Collection } = require("discord.js"); //Discord 
 const fs = require("fs");
 const { filter } = require("core-js/features/array");
 const { commands } = require("./events/ready");
-const twitWatchdog = require("./twitter-integration/twitterStart");
-require("dotenv").config();
+const twitWatchdog = require("./twitter-integration/twitterStart"); //Twitter 
+require("dotenv").config(); //Config
 
 //Discord
 const statBot = new Client({
@@ -33,14 +33,6 @@ const eventFiles = fs
   .filter((file) => file.endsWith(".js"));
 const commandFolders = fs.readdirSync("./src/commands");
 
-//File Registration - Twitter
-// const twitterFunctions = fs
-//   .readdirSync("./src/twitterFunctions")
-//   .filter((file) => file.endsWith(".js"));
-// const twitterEvents = fs
-//   .readdirSync("./src/twitterEvents")
-//   .filter((file) => file.endsWith(".js"));
-
 //Startup
 (async () => {
   //Discord Side
@@ -50,6 +42,7 @@ const commandFolders = fs.readdirSync("./src/commands");
   statBot.handleEvents(eventFiles, "./src/events");
   statBot.handleCommands(commandFolders, "./src/commands");
   statBot.login(process.env.token);
+  //Twitter Side
   twitWatchdog.start(statBot);
 })();
 
