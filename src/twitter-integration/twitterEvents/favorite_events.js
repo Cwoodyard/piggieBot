@@ -17,7 +17,7 @@ module.exports = {
       const channel = discord.channels
         .fetch("894618672721694720")
         //sending the link to said tweet to the channel!
-        .then((channel) => channel.send("Tweet has been liked!" + link))
+        .then((channel) => channel.send("Tweet has been liked! " + link))
         .catch(console.error);
 
       // Just a log to say it was created!
